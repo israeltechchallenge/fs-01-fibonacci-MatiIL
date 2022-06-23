@@ -11,10 +11,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <link rel="style" href="./fibonacci.css">
 </head>
+
 <body>
-    <div class="fibo-of">
-        <p><span>The Fibonacci of </span> is </p>
+    <h1 class="display-1 m-5">Fibonacci Calculator</h1>
+    <form class="d-flex flex-row m-5 align-items-center">
+        <div class="fs-4 p-1 align-self-center">
+         The Fibonacci of
+         </div>
+        <div class="p-1 align-self-center">
+            <input id="user-input" type="number" size="1" class="form-control" placeholder="#">
+        </div>
+         <div class="p-1">
+            <button id="isbutton" type="submit" class="btn btn-primary">is</button>
+        </div>
+        <div class="fs-4 p-1">
+        <u id="user-output"  ><strong></strong></u>
     </div>
-    <script src="./fibonacci.js"></script>
+    </form>
+
+    <!--
+    <div class="mb-5 mt-3 d-flex flex-row align-items-center">
+    <h2 class="display-3 mx-5 mt-3">Results</h2><div class="spinner-border mt-4" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+    -->
+
+        
+    <script src="./fibonacci.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,24 +1,35 @@
-let fibNumIndex = document.querySelector("span");
-let fibNum = document.querySelector("p");
+const calcBtn = document.getElementById('isbutton');
+const outputNum = document.getElementById('user-output');
+const userInput = document.getElementById('user-input');
 
-function fibNumCalc(x) {
-    let yAntecedent = 0;
-    let y = 1;
-    if (x <= 0)
-    return null;
-    else if (x === 1)
-    return yAntecedent;
-         else for(let i = 2; i < x; i++) {
-            let preCedingNums = y + yAntecedent;
-            yAntecedent = y;
-            y = preCedingNums;
-    }
-    return y;   
+calcBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    let fibNumIndex = userInput.value;
+    return fibNumCalc(fibNumIndex);
+})
+
+function fibNumCalc(fibNumIndex) {
+    let fibAntecedent = 0;
+    let fibNum = 1;
+    if (fibNumIndex <= 1) {
+        fibNum = 0;
+    } 
+    else for(let i = 2; i < fibNumIndex; i++) {
+            let preCedingNums = fibNum + fibAntecedent;
+            fibAntecedent = fibNum;
+            fibNum = preCedingNums;
+            }
+      return appendFibNum(fibNum);
 }
 
-let x = 8;
-fibNumIndex.innerText += x;
-fibNum.innerText += fibNumCalc(x);
+function appendFibNum(fibNum) {
+    const outputNum = document.getElementById('user-output');
+    outputNum.innerHTML = fibNum;
+}
+
+
+
+
 
 
 
