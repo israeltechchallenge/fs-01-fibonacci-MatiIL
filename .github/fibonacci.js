@@ -5,35 +5,17 @@ const userInput = document.getElementById('user-input');
 calcBtn.addEventListener('click', function(e) {
     e.preventDefault();
     let fibNumIndex = userInput.value;
-    return fibNumCalc(fibNumIndex);
+    return callFibServer(fibNumIndex);
 })
 
-function fibNumCalc(fibNumIndex) {
-    let fibAntecedent = 0;
-    let fibNum = 1;
-    if (fibNumIndex <= 1) {
-        fibNum = 0;
-    } 
-    else for(let i = 2; i < fibNumIndex; i++) {
-            let preCedingNums = fibNum + fibAntecedent;
-            fibAntecedent = fibNum;
-            fibNum = preCedingNums;
-            }
-      return appendFibNum(fibNum);
+function callFibServer(fibNumIndex) {
+const SERVER_URL = `http://localhost:5050/fibonacci/${fibNumIndex}`;
+fetch(SERVER_URL)
+.then(function(response) {
+    console.log(response);
+    return response.json(); 
+  })
+.then(function(data) {
+    outputNum.innerHTML = data.result;
+  });
 }
-
-function appendFibNum(fibNum) {
-    const outputNum = document.getElementById('user-output');
-    outputNum.innerHTML = fibNum;
-}
-
-
-
-
-
-
-
-
-
-
-
