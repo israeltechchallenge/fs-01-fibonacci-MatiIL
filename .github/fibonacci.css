@@ -6,3 +6,16 @@ input::-webkit-inner-spin-button {
   input[type=number] { -moz-appearance: textfield;
 }
 
+.pink-alert {
+  color: rgba(169, 68, 66, 1);
+  background-color: rgba(235, 204, 204, 1);
+  border: 1px solid rgba(235, 204, 204, 1);
+  border-radius: 5px;
+}
+
+.server-error {
+  display: inline-block;
+  color: #D9534F;
+  font-size: 16px;
+  text-decoration: none;
+}
