@@ -3,7 +3,11 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-  input[type=number] { -moz-appearance: textfield;
+
+  input[type=number] { 
+    -moz-appearance: textfield;
+    width: 15%;
+
 }
 
 .pink-alert {
@@ -11,11 +15,21 @@ input::-webkit-inner-spin-button {
   background-color: rgba(235, 204, 204, 1);
   border: 1px solid rgba(235, 204, 204, 1);
   border-radius: 5px;
+  width: fit-content;
+  margin-left: 130px;
 }
 
 .server-error {
   display: inline-block;
   color: #D9534F;
-  font-size: 16px;
+  font-size: 15px;
   text-decoration: none;
 }
+
+li {
+  list-style: none;
+  margin-top: 20px;
+  margin-left: 16px;
+  border-bottom: 1px solid black;
+}
+
