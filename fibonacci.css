@@ -1,3 +1,4 @@
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -6,7 +7,7 @@ input::-webkit-inner-spin-button {
 
   input[type=number] { 
     -moz-appearance: textfield;
-    width: 15%;
+    width: 10%;
 
 }
 
@@ -16,7 +17,9 @@ input::-webkit-inner-spin-button {
   border: 1px solid rgba(235, 204, 204, 1);
   border-radius: 5px;
   width: fit-content;
-  margin-left: 130px;
+  margin-left: 195px;
+  margin-top: -20px;
+  z-index: 1;
 }
 
 .server-error {
@@ -32,4 +35,3 @@ li {
   margin-left: 16px;
   border-bottom: 1px solid black;
 }
-
