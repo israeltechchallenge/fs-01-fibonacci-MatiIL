@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Assignment Mati Breski</title>
+    <link href="./fibonacci.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="display-1 mt-5 ms-5 me-5 mb-1">Fibonacci Calculator</h1>
+    
+    <form class="main-line d-flex flex-row ms-4 justify-content-around align-items-center w-50">
+        <div class="d-flex flex-column">
+        <div class="fs-4 p-1 justify-content-start align-self-center mt-5 w-100 ms-3 me-1 text-end">
+         The Fibonacci of
+         </div>
+         <div class="d-flex flex-row ms-4 ps-1"><input type="checkbox" id="save-calc" name="checkbox" class="mt-2" >
+<label for="checkbox" class="ms-1">Save Calculation</label></div>
+         </div>
+            <input id="user-input" type="number" size="1" class="form-control mt-4 ms-3" placeholder="  #">
+    </div>
+         <div class="p-1 d-flex flex-row">
+            <button id="isbutton" type="submit" class="btn btn-primary mt-4 ms-1">is</button>
+        </div>
+        <div id="user-output" class="server-error  p-1 w-50 ms-2 mt-4 ">
+    </div>
+    </form>
+    <div id="alert" class="p-1 text-center pink-alert visually-hidden">Can't be larger than 50 
+    </div>
+    <div class="mb-5 mt-3 d-flex flex-column align-items-start">
+        <div class="d-flex flex=column ">
+    <h2 class="display-3 mx-5 mt-4">Results</h2><div id="results-spinner" class="align-self-center spinner-border mt-5 visually-hidden" role="status"> 
+    </div>
+</div>
+        <div class="d-flex flex-column justify-content-start">
+            <ul id="results-list" class="d-flex flex-column"></ul>  
+</div>
+      
+    <script src="./fibonacci.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
